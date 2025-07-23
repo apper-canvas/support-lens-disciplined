@@ -5,6 +5,7 @@ import Button from "@/components/atoms/Button";
 import StatusBadge from "@/components/molecules/StatusBadge";
 import ApperIcon from "@/components/ApperIcon";
 import { appsService } from "@/services/api/appsService";
+import { usersService } from "@/services/api/usersService";
 
 const AppDetailModal = ({ app, aiLogs, isOpen, onClose }) => {
 const [salesComments, setSalesComments] = useState([]);
@@ -13,10 +14,13 @@ const [salesComments, setSalesComments] = useState([]);
   const [isLoadingComments, setIsLoadingComments] = useState(false);
   const [editingCommentId, setEditingCommentId] = useState(null);
   const [editingCommentText, setEditingCommentText] = useState("");
-
-  useEffect(() => {
+  const [userDetails, setUserDetails] = useState(null);
+  const [isLoadingUserDetails, setIsLoadingUserDetails] = useState(false);
+  const [userDetailsError, setUserDetailsError] = useState("");
+useEffect(() => {
     if (isOpen && app) {
       loadSalesComments();
+      loadUserDetails();
     }
   }, [isOpen, app]);
 
@@ -30,8 +34,21 @@ const [salesComments, setSalesComments] = useState([]);
     } finally {
       setIsLoadingComments(false);
     }
-  };
+};
 
+  const loadUserDetails = async () => {
+    try {
+      setIsLoadingUserDetails(true);
+      setUserDetailsError("");
+      const user = await usersService.getById(app.userId);
+      setUserDetails(user);
+    } catch (error) {
+      setUserDetailsError("Failed to load user details");
+      toast.error("Failed to load user details");
+    } finally {
+      setIsLoadingUserDetails(false);
+    }
+  };
   const handleAddComment = async (e) => {
     e.preventDefault();
     if (!newComment.trim()) return;
@@ -121,6 +138,79 @@ const [salesComments, setSalesComments] = useState([]);
               <div className="text-sm text-slate-500 mb-1">Total Messages</div>
               <div className="font-medium text-slate-900">{app.totalMessages}</div>
             </div>
+</div>
+
+          {/* User Details */}
+          <div className="mb-8">
+            <h3 className="text-lg font-semibold text-slate-900 mb-4">User Details</h3>
+            {isLoadingUserDetails ? (
+              <div className="flex items-center justify-center py-8">
+                <ApperIcon name="Loader2" className="w-6 h-6 animate-spin text-slate-400" />
+                <span className="ml-2 text-slate-500">Loading user details...</span>
+              </div>
+            ) : userDetailsError ? (
+              <div className="bg-error-50 border border-error-200 rounded-lg p-4">
+                <div className="flex items-center space-x-2">
+                  <ApperIcon name="AlertCircle" className="w-5 h-5 text-error-500" />
+                  <span className="text-error-700">{userDetailsError}</span>
+                </div>
+              </div>
+            ) : userDetails ? (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">User ID</div>
+                  <div className="font-medium text-slate-900">{userDetails.Id}</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">Name</div>
+                  <div className="font-medium text-slate-900">{userDetails.Name}</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">Email</div>
+                  <div className="font-medium text-slate-900">{userDetails.Email}</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">User ID Reference</div>
+                  <div className="font-medium text-slate-900">{userDetails.UserId}</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">Total Apps</div>
+                  <div className="font-medium text-slate-900">{userDetails.TotalApps}</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">Apps with DB</div>
+                  <div className="font-medium text-slate-900">{userDetails.TotalAppWithDB}</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">Credits Used</div>
+                  <div className="font-medium text-slate-900">{userDetails.TotalCreditsUsed?.toLocaleString()}</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">Plan</div>
+                  <div className="font-medium text-slate-900 capitalize">{userDetails.Plan}</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">Platform Signup</div>
+                  <div className="font-medium text-slate-900">
+                    {userDetails.PlatformSignupDate ? format(new Date(userDetails.PlatformSignupDate), "MMM d, yyyy") : "N/A"}
+                  </div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">Apper Signup</div>
+                  <div className="font-medium text-slate-900">
+                    {userDetails.ApperSignupDate ? format(new Date(userDetails.ApperSignupDate), "MMM d, yyyy") : "N/A"}
+                  </div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">Company ID</div>
+                  <div className="font-medium text-slate-900">{userDetails.CompanyID}</div>
+                </div>
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <div className="text-sm text-slate-500 mb-1">Company User ID</div>
+                  <div className="font-medium text-slate-900">{userDetails.CompanyUserId}</div>
+                </div>
+              </div>
+            ) : null}
           </div>
 
           {/* Current Status */}
