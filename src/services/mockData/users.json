@@ -1,0 +1,152 @@
+[
+  {
+    "Id": 1,
+    "id": "user1",
+    "email": "john.doe@techcorp.com",
+    "company": "TechCorp Solutions",
+    "plan": "enterprise",
+    "signupDate": "2023-08-15T00:00:00Z",
+    "totalApps": 3,
+    "creditsUsed": 2450
+  },
+  {
+    "Id": 2,
+    "id": "user2",
+    "email": "sarah.wilson@retailpro.com",
+    "company": "RetailPro Inc",
+    "plan": "pro",
+    "signupDate": "2023-09-22T00:00:00Z",
+    "totalApps": 2,
+    "creditsUsed": 890
+  },
+  {
+    "Id": 3,
+    "id": "user3",
+    "email": "mike.chen@dataflow.io",
+    "company": "DataFlow Analytics",
+    "plan": "enterprise",
+    "signupDate": "2023-07-10T00:00:00Z",
+    "totalApps": 4,
+    "creditsUsed": 3200
+  },
+  {
+    "Id": 4,
+    "id": "user4",
+    "email": "lisa.rodriguez@startup.co",
+    "company": "Startup Co",
+    "plan": "free",
+    "signupDate": "2023-11-05T00:00:00Z",
+    "totalApps": 1,
+    "creditsUsed": 150
+  },
+  {
+    "Id": 5,
+    "id": "user5",
+    "email": "robert.taylor@fintech.com",
+    "company": "FinTech Solutions",
+    "plan": "enterprise",
+    "signupDate": "2023-06-18T00:00:00Z",
+    "totalApps": 5,
+    "creditsUsed": 4100
+  },
+  {
+    "Id": 6,
+    "id": "user6",
+    "email": "emma.johnson@media.org",
+    "company": "Media Organization",
+    "plan": "pro",
+    "signupDate": "2023-10-12T00:00:00Z",
+    "totalApps": 2,
+    "creditsUsed": 1200
+  },
+  {
+    "Id": 7,
+    "id": "user7",
+    "email": "david.brown@shopstore.com",
+    "company": "ShopStore Ltd",
+    "plan": "pro",
+    "signupDate": "2023-09-08T00:00:00Z",
+    "totalApps": 3,
+    "creditsUsed": 1800
+  },
+  {
+    "Id": 8,
+    "id": "user8",
+    "email": "jennifer.davis@corporate.biz",
+    "company": "Corporate Business",
+    "plan": "enterprise",
+    "signupDate": "2023-05-20T00:00:00Z",
+    "totalApps": 6,
+    "creditsUsed": 5200
+  },
+  {
+    "Id": 9,
+    "id": "user9",
+    "email": "alex.martinez@mobiletech.io",
+    "company": "MobileTech",
+    "plan": "pro",
+    "signupDate": "2023-12-01T00:00:00Z",
+    "totalApps": 2,
+    "creditsUsed": 670
+  },
+  {
+    "Id": 10,
+    "id": "user10",
+    "email": "sophia.white@socialnet.com",
+    "company": "SocialNet Inc",
+    "plan": "enterprise",
+    "signupDate": "2023-04-25T00:00:00Z",
+    "totalApps": 4,
+    "creditsUsed": 3800
+  },
+  {
+    "Id": 11,
+    "id": "user11",
+    "email": "thomas.anderson@edu.org",
+    "company": "Education Org",
+    "plan": "pro",
+    "signupDate": "2023-08-30T00:00:00Z",
+    "totalApps": 3,
+    "creditsUsed": 1400
+  },
+  {
+    "Id": 12,
+    "id": "user12",
+    "email": "maria.garcia@iottech.com",
+    "company": "IoT Technologies",
+    "plan": "enterprise",
+    "signupDate": "2023-07-15T00:00:00Z",
+    "totalApps": 2,
+    "creditsUsed": 2800
+  },
+  {
+    "Id": 13,
+    "id": "user13",
+    "email": "james.wilson@booking.co",
+    "company": "Booking Company",
+    "plan": "pro",
+    "signupDate": "2023-10-20T00:00:00Z",
+    "totalApps": 1,
+    "creditsUsed": 950
+  },
+  {
+    "Id": 14,
+    "id": "user14",
+    "email": "linda.thompson@automate.io",
+    "company": "Automate Solutions",
+    "plan": "enterprise",
+    "signupDate": "2023-06-05T00:00:00Z",
+    "totalApps": 3,
+    "creditsUsed": 3600
+  },
+  {
+    "Id": 15,
+    "id": "user15",
+    "email": "kevin.lee@chatapp.com",
+    "company": "ChatApp Inc",
+    "plan": "free",
+    "signupDate": "2023-12-10T00:00:00Z",
+    "totalApps": 1,
+    "creditsUsed": 85
+  }
+]

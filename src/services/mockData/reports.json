@@ -1,0 +1,52 @@
+[
+  {
+    "Id": 1,
+    "name": "Daily Apps Status Report",
+    "type": "apps_overview",
+    "schedule": "daily",
+    "format": "csv",
+    "status": "completed",
+    "createdAt": "2024-01-10T09:00:00Z",
+    "lastRun": "2024-01-15T09:00:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "Weekly User Analytics Summary",
+    "type": "user_analytics",
+    "schedule": "weekly",
+    "format": "xlsx",
+    "status": "completed",
+    "createdAt": "2024-01-08T14:30:00Z",
+    "lastRun": "2024-01-14T14:30:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Critical Issues Report",
+    "type": "ai_analysis",
+    "schedule": "daily",
+    "format": "pdf",
+    "status": "running",
+    "createdAt": "2024-01-12T08:15:00Z",
+    "lastRun": "2024-01-15T08:15:00Z"
+  },
+  {
+    "Id": 4,
+    "name": "Monthly Executive Summary",
+    "type": "status_summary",
+    "schedule": "monthly",
+    "format": "pdf",
+    "status": "pending",
+    "createdAt": "2024-01-05T16:00:00Z",
+    "lastRun": null
+  },
+  {
+    "Id": 5,
+    "name": "Support Team Dashboard Export",
+    "type": "apps_overview",
+    "schedule": "once",
+    "format": "csv",
+    "status": "failed",
+    "createdAt": "2024-01-14T11:20:00Z",
+    "lastRun": "2024-01-14T11:25:00Z"
+  }
+]

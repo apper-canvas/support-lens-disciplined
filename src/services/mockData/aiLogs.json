@@ -1,0 +1,202 @@
+[
+  {
+    "Id": 1,
+    "appId": "1",
+    "timestamp": "2024-01-15T14:25:00Z",
+    "status": "smooth_progress",
+    "sentiment": 0.8,
+    "frustrationLevel": 2,
+    "technicalComplexity": 4,
+    "message": "User successfully implemented the database connection and is making good progress with the customer portal setup."
+  },
+  {
+    "Id": 2,
+    "appId": "2",
+    "timestamp": "2024-01-15T12:10:00Z",
+    "status": "abandonment_risk",
+    "sentiment": 0.3,
+    "frustrationLevel": 8,
+    "technicalComplexity": 7,
+    "message": "User has been struggling with database connectivity for over 2 hours. Multiple failed attempts to establish connection."
+  },
+  {
+    "Id": 3,
+    "appId": "3",
+    "timestamp": "2024-01-15T16:40:00Z",
+    "status": "learning_effectively",
+    "sentiment": 0.7,
+    "frustrationLevel": 3,
+    "technicalComplexity": 6,
+    "message": "User is methodically working through the analytics dashboard configuration and asking relevant questions."
+  },
+  {
+    "Id": 4,
+    "appId": "4",
+    "timestamp": "2024-01-15T10:15:00Z",
+    "status": "stuck",
+    "sentiment": 0.4,
+    "frustrationLevel": 6,
+    "technicalComplexity": 5,
+    "message": "User is having difficulty understanding the task tracking API endpoints and keeps repeating the same questions."
+  },
+  {
+    "Id": 5,
+    "appId": "5",
+    "timestamp": "2024-01-15T15:05:00Z",
+    "status": "debugging",
+    "sentiment": 0.5,
+    "frustrationLevel": 5,
+    "technicalComplexity": 8,
+    "message": "User is actively debugging payment processing errors. Technical complexity is high but engagement is good."
+  },
+  {
+    "Id": 6,
+    "appId": "6",
+    "timestamp": "2024-01-15T13:35:00Z",
+    "status": "completely_lost",
+    "sentiment": 0.2,
+    "frustrationLevel": 9,
+    "technicalComplexity": 6,
+    "message": "User seems completely overwhelmed by the CMS setup process and is not making any meaningful progress."
+  },
+  {
+    "Id": 7,
+    "appId": "7",
+    "timestamp": "2024-01-15T17:20:00Z",
+    "status": "highly_engaged",
+    "sentiment": 0.9,
+    "frustrationLevel": 1,
+    "technicalComplexity": 5,
+    "message": "User is very enthusiastic about the e-commerce features and is implementing advanced customizations."
+  },
+  {
+    "Id": 8,
+    "appId": "8",
+    "timestamp": "2024-01-15T11:50:00Z",
+    "status": "needs_guidance",
+    "sentiment": 0.6,
+    "frustrationLevel": 4,
+    "technicalComplexity": 4,
+    "message": "User is making progress with HR management system but frequently asks for clarification on best practices."
+  },
+  {
+    "Id": 9,
+    "appId": "9",
+    "timestamp": "2024-01-15T09:25:00Z",
+    "status": "frustrated",
+    "sentiment": 0.3,
+    "frustrationLevel": 7,
+    "technicalComplexity": 7,
+    "message": "User is experiencing multiple API integration failures and expressing frustration with the documentation."
+  },
+  {
+    "Id": 10,
+    "appId": "10",
+    "timestamp": "2024-01-15T17:55:00Z",
+    "status": "goal_achieved",
+    "sentiment": 0.85,
+    "frustrationLevel": 1,
+    "technicalComplexity": 6,
+    "message": "User has successfully completed the social platform integration and achieved all their initial goals."
+  },
+  {
+    "Id": 11,
+    "appId": "1",
+    "timestamp": "2024-01-15T13:45:00Z",
+    "status": "requesting_examples",
+    "sentiment": 0.65,
+    "frustrationLevel": 3,
+    "technicalComplexity": 5,
+    "message": "User is asking for specific code examples for implementing user authentication in the customer portal."
+  },
+  {
+    "Id": 12,
+    "appId": "2",
+    "timestamp": "2024-01-15T11:30:00Z",
+    "status": "giving_up",
+    "sentiment": 0.25,
+    "frustrationLevel": 9,
+    "technicalComplexity": 8,
+    "message": "User mentioned considering switching to a different solution due to database connection issues."
+  },
+  {
+    "Id": 13,
+    "appId": "11",
+    "timestamp": "2024-01-15T14:15:00Z",
+    "status": "confused",
+    "sentiment": 0.45,
+    "frustrationLevel": 5,
+    "technicalComplexity": 4,
+    "message": "User is confused about the learning platform's content structure and navigation hierarchy."
+  },
+  {
+    "Id": 14,
+    "appId": "12",
+    "timestamp": "2024-01-15T16:05:00Z",
+    "status": "integration_problems",
+    "sentiment": 0.35,
+    "frustrationLevel": 6,
+    "technicalComplexity": 9,
+    "message": "User is facing significant challenges integrating IoT devices with the dashboard API."
+  },
+  {
+    "Id": 15,
+    "appId": "13",
+    "timestamp": "2024-01-15T12:40:00Z",
+    "status": "requesting_examples",
+    "sentiment": 0.65,
+    "frustrationLevel": 3,
+    "technicalComplexity": 4,
+    "message": "User wants to see examples of booking system implementations for their specific use case."
+  },
+  {
+    "Id": 16,
+    "appId": "14",
+    "timestamp": "2024-01-15T15:30:00Z",
+    "status": "performance_issues",
+    "sentiment": 0.4,
+    "frustrationLevel": 6,
+    "technicalComplexity": 8,
+    "message": "User is experiencing slow response times in the workflow engine and needs optimization guidance."
+  },
+  {
+    "Id": 17,
+    "appId": "15",
+    "timestamp": "2024-01-15T13:15:00Z",
+    "status": "giving_up",
+    "sentiment": 0.25,
+    "frustrationLevel": 8,
+    "technicalComplexity": 6,
+    "message": "User expressed that the chat application setup is too complex for their free plan limitations."
+  },
+  {
+    "Id": 18,
+    "appId": "3",
+    "timestamp": "2024-01-15T15:20:00Z",
+    "status": "goal_achieved",
+    "sentiment": 0.8,
+    "frustrationLevel": 2,
+    "technicalComplexity": 7,
+    "message": "User successfully created their first analytics dashboard with real-time data visualization."
+  },
+  {
+    "Id": 19,
+    "appId": "5",
+    "timestamp": "2024-01-15T14:10:00Z",
+    "status": "troubleshooting_db",
+    "sentiment": 0.45,
+    "frustrationLevel": 5,
+    "technicalComplexity": 9,
+    "message": "User is working through database performance issues affecting payment transaction processing."
+  },
+  {
+    "Id": 20,
+    "appId": "7",
+    "timestamp": "2024-01-15T16:30:00Z",
+    "status": "seeking_alternatives",
+    "sentiment": 0.55,
+    "frustrationLevel": 4,
+    "technicalComplexity": 5,
+    "message": "User is exploring alternative e-commerce plugins for better mobile responsiveness."
+  }
+]
