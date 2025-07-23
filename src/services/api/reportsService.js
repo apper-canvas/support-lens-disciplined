@@ -61,6 +61,21 @@ export const reportsService = {
       reportsData[index].status = "completed";
     }, 3000);
     
-    return { ...reportsData[index] };
+return { ...reportsData[index] };
+  },
+
+  async getByDateRange(startDate, endDate) {
+    await new Promise(resolve => setTimeout(resolve, 250));
+    
+    const start = new Date(startDate);
+    const end = new Date(endDate);
+    end.setHours(23, 59, 59, 999); // Include full end date
+    
+    const filtered = reportsData.filter(report => {
+      const reportDate = new Date(report.createdAt);
+      return reportDate >= start && reportDate <= end;
+    });
+    
+    return [...filtered];
   }
 };

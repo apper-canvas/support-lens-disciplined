@@ -1,14 +1,16 @@
 import React from "react";
+import ApperIcon from "@/components/ApperIcon";
 import Button from "@/components/atoms/Button";
 import FilterGroup from "@/components/molecules/FilterGroup";
-import ApperIcon from "@/components/ApperIcon";
-
+import DateRangePicker from "@/components/molecules/DateRangePicker";
 const FilterPanel = ({ 
   isOpen, 
   onToggle, 
   filters, 
   onFiltersChange,
-  onClearFilters 
+  onClearFilters,
+  dateRange,
+  onDateRangeChange
 }) => {
   const statusCategories = [
     {
@@ -97,6 +99,14 @@ const FilterPanel = ({
             <ApperIcon name="X" className="w-4 h-4" />
           </Button>
         </div>
+      </div>
+
+{/* Date Range Filter */}
+      <div className="mb-6 pb-6 border-b border-slate-200">
+        <DateRangePicker 
+          dateRange={dateRange || { start: null, end: null }}
+          onDateRangeChange={onDateRangeChange}
+        />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
