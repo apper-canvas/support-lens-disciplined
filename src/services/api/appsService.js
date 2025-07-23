@@ -1,5 +1,9 @@
 import appsData from "@/services/mockData/apps.json";
 
+// In-memory storage for sales comments
+let salesComments = [];
+let nextCommentId = 1;
+
 export const appsService = {
   async getAll() {
     // Simulate API delay
@@ -43,6 +47,52 @@ export const appsService = {
       throw new Error("App not found");
     }
     appsData.splice(index, 1);
+return { success: true };
+  },
+
+  async addSalesComment(appId, content) {
+    await new Promise(resolve => setTimeout(resolve, 300));
+    const comment = {
+      Id: nextCommentId++,
+      appId: parseInt(appId),
+      content,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString()
+    };
+    salesComments.push(comment);
+    return { ...comment };
+  },
+
+  async getSalesComments(appId) {
+    await new Promise(resolve => setTimeout(resolve, 200));
+    return salesComments
+      .filter(comment => comment.appId === parseInt(appId))
+      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+      .map(comment => ({ ...comment }));
+  },
+
+  async updateSalesComment(commentId, updates) {
+    await new Promise(resolve => setTimeout(resolve, 250));
+    const index = salesComments.findIndex(comment => comment.Id === parseInt(commentId));
+    if (index === -1) {
+      throw new Error("Comment not found");
+    }
+    
+    salesComments[index] = {
+      ...salesComments[index],
+      ...updates,
+      updatedAt: new Date().toISOString()
+    };
+    return { ...salesComments[index] };
+  },
+
+  async deleteSalesComment(commentId) {
+    await new Promise(resolve => setTimeout(resolve, 200));
+    const index = salesComments.findIndex(comment => comment.Id === parseInt(commentId));
+    if (index === -1) {
+      throw new Error("Comment not found");
+    }
+    salesComments.splice(index, 1);
     return { success: true };
   }
 };
